@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:3000"})
+@CrossOrigin(origins = {"http://localhost:3000", "https://roommanagementfrontend.onrender.com"})
 @RequestMapping("/api/rooms")
 public class RoomController {
     private final RoomService roomService;

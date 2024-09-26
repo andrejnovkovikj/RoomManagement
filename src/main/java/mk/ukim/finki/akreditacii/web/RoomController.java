@@ -64,8 +64,8 @@ public class RoomController {
     }
 
     @PostMapping("/add")
-    public Room addRoom(@RequestBody Room room) {
-        return roomRepository.save(room);
+    public ResponseEntity<Room> addRoom(@RequestBody Room room) {
+        Room savedRoom = roomRepository.save(room);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedRoom);
     }
-
 }

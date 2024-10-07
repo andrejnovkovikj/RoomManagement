@@ -54,7 +54,6 @@ public class RoomController {
     public ResponseEntity<?> updateRoom(
             @PathVariable String name,
             @RequestBody Room updatedRoom) {
-        // Update room using updatedRoom object properties
         roomService.update(name, updatedRoom);
         return ResponseEntity.ok("Room updated successfully");
     }

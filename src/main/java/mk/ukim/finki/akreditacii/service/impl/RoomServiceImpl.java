@@ -61,7 +61,6 @@ public class RoomServiceImpl implements RoomService {
     public Room update(String name, Room updatedRoom) {
         Room roomToUpdate = roomRepository.findByName(name);
 
-        // Update properties of roomToUpdate with values from updatedRoom
         roomToUpdate.setLocationDescription(updatedRoom.getLocationDescription());
         roomToUpdate.setEquipmentDescription(updatedRoom.getEquipmentDescription());
         roomToUpdate.setType(updatedRoom.getType());
